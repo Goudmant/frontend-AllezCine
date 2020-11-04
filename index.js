@@ -18,6 +18,85 @@ button.onclick = function(event){
   const value = inputElement.value;
   console.log('value:' ,value)
 } 
+//ma api kley a étée utilisée dans  navigateur a la suite de:
+// https://api.themoviedb.org/3/movie/76341?api_key=
+//;
+// jeton v4 auth 
+//eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJhNWU5Y2U5MTA4NjNkM2JlOTE1M2MzMzc2NzhlODQ2MCIsInN1YiI6IjVmYTE1ZDg1MGMxMjU1MDAzNzI3N2MxMyIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.wh2Xh_ffGQ2GWqZ9-W3DHMva1VEAkXSFP9UwXXPGNoo
+
+const API_KEY = 'a5e9ce910863d3be9153c337678e8460';
+const url ='https://api.themoviedb.org/3/search/movie/?api_key=a5e9ce910863d3be9153c337678e8460'
+
+const inputElement = document.querySelector('#inputValue');
+const button = document.querySelector('#search');
+const moviesSearchable =document.querySelector('#movies-searchable');
+
+
+function movieSection(movies){
+	return movies.map((movie) => {
+		return `
+				<img src=${movie.poster_path} data-movie-id=${movie.id}/>
+			`;
+	})
+}
+
+//esseye de recreer sa 
+/*<div id="movies-searchable">
+            <div class="movie">
+                <section class="section">
+                    <img
+                    src=""
+                    alt=""
+                    data-movie-id=""
+                    />
+                    <img
+                    src=""
+                    alt=""
+                    data-movie-id=""
+                    />
+                </section>
+                <div class="content">
+                    <p id="content-close">xx</p>
+                </div>
+            </div>
+		</div>    */ 
+		
+function createMovieContainer(movies){
+	const movieElement =document.createElement('div');//ligne 74
+	movieElement.setAttribute('class', 'movie');//ligne 74
+	//ligne 76
+	const movieTemplate =`
+	<section class="section">
+		${movieSection(movies)}  
+	</section>
+	<div class="content">
+		<p id="content-close">xx</p>
+	</div>
+	`;
+
+	movieElement.innerHTML = movieTemplate;
+	return movieElement;
+}
+//commence ici
+button.onclick = function(event){
+  	event.preventDefault();
+  	const value = inputElement.value;
+   	const newUrl = url + '&query=' + value; 
+
+  fetch(newUrl)
+      .then((res)=> res.json())
+      .then((data) => {
+		  //data-result
+		  const movies = data.results;
+		  const moveBlock = createMovieContainer(movie);
+		  moviesSearchable.
+          console.log('data : ',data);
+      })
+      .catch(() => {
+        console.log('erro:', error);
+      });
+  console.log('value:' ,value);
+}
 /////////////////// menu déroule /////////////////
 (function() {
   var tabMenu = document.querySelectorAll('.deroule');
