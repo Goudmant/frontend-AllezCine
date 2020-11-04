@@ -1,28 +1,57 @@
 
 //test
 div.sous-titre {
-    border-left: 3px solid red;
+    border-left: 3px solid #fe423f;
 }
-ul.featureM {
-    list-style-type:none;
-    
-}
-.li {
+////////////////// jumbotron deroule 
+*{
+    box-sizing: border-box;
+  }
+  ul{
     list-style-type: none;
-}
-.reseaux {
-    margin-top: 5%;
-}
-div.rowjustify-content-centeralign-items-center {
-    margin: 5px;
-    border-radius: solid 2px white;
-}
-ul {
-    list-style-type: none;
-    border-radius: solid 2px white;
-}
-li.reseaux {
-    float: left;
-    
-    
-}
+    margin: 0;
+    padding: 0;
+  }
+  /* custom menu */
+  nav:after{
+    content: "";
+    clear: both;
+    display: block;
+  }
+  nav a{
+    display: block;
+    text-decoration: none;
+    white-space: nowrap;
+  }
+  nav ul ul{
+    background-color: #fff;
+    display: none;
+    position: absolute;
+    min-width: 100%;
+  }
+  nav>ul{
+    display: flex;
+  }
+  nav>ul>li{
+    position: relative;
+    margin: 1px;
+    flex-grow: 1;
+  }
+  nav ul ul li+li{
+    border-top: 1px solid white;
+  }
+  nav ul li a{
+    background-color: silver;
+    padding: 10px 20px;
+    color: grey;
+    text-align: center;
+  }
+  nav>ul>li>a{
+    background-color: rgb(63,70,76);
+    color: white;
+  } 
+  nav ul ul a{
+    background-color:  rgb(282,97,1);
+    color: white;
+  }
+/////////////////////////deroule////////////
