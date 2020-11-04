@@ -18,6 +18,7 @@ button.onclick = function(event){
   const value = inputElement.value;
   console.log('value:' ,value)
 } 
+/////////////////// menu déroule /////////////////
 (function() {
   var tabMenu = document.querySelectorAll('.deroule');
   var tabD = document.querySelectorAll('ul ul');
@@ -48,4 +49,5 @@ button.onclick = function(event){
   window.addEventListener("scroll",function(){
     tabMenu.forEach(ferme);
   });
-})();  
+})(); 
+////////////menu deroule fin /////////////// 
