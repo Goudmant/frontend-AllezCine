@@ -48,4 +48,4 @@ button.onclick = function(event){
   window.addEventListener("scroll",function(){
     tabMenu.forEach(ferme);
   });
-})();
+})();  
