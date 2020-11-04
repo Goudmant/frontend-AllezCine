@@ -1,4 +1,4 @@
-div.sous-titre {
+div.sous-cat {
   border-left: 3px solid #fe423f;
 }
 
@@ -77,5 +77,21 @@ nav ul ul a {
   border-top: 6px solid;
   border-right: 6px solid transparent;
   border-left: 6px solid transparent;
+}
+
+.titre {
+  font-family: 'Righteous', cursive;
+}
+
+.sous-titre {
+  font-family: 'Righteous', cursive;
+}
+
+span {
+  color: white;
+}
+
+body {
+  font-family: 'Righteous', cursive;
 }
 /*# sourceMappingURL=style.css.map */
