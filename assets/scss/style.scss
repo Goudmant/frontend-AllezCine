@@ -54,4 +54,14 @@ div.sous-titre {
     background-color:  rgb(282,97,1);
     color: white;
   }
+  .fleche {
+    display: inline-block;
+    width: 0;
+    height: 0;
+    margin-left: 4px;
+    vertical-align: middle;
+    border-top: 6px solid;
+    border-right: 6px solid transparent;
+    border-left: 6px solid transparent;
+  }
 /////////////////////////deroule////////////
