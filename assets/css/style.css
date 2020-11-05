@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Baloo+Tamma+2:wght@400;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Baloo+Tamma+2:wght@400;600&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -45,16 +46,23 @@ a {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  gap: 2rem;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  gap: 0,1rem;
   color: #fff;
   padding: 1rem 2rem;
   border-top-right-radius: 5rem;
   border-bottom-right-radius: 5rem;
   -webkit-transition: all .3s ease;
   transition: all .3s ease;
+  text-decoration: none;
+  text-align: center;
+}
+
+.social-icons .social p {
+  margin-left: 1em;
+  margin-right: 1em;
 }
 
 .social-icons .social i {
@@ -122,6 +130,10 @@ a {
   padding: 1rem 6rem;
 }
 
+#popupCookie .popup-cookie i {
+  margin-right: 1em;
+}
+
 #popupCookie .popup-cookie .popup-cookie__par {
   padding: 5rem;
   display: -webkit-box;
@@ -135,10 +147,11 @@ a {
 
 #popupCookie .popup-cookie p {
   margin: 1rem 0;
+  text-decoration: none;
 }
 
 #popupCookie .popup-cookie a {
-  text-decoration: underline;
+  text-decoration: none;
 }
 
 #popupCookie .popup-cookie h4 {
@@ -185,5 +198,82 @@ img:hover {
 
 .content-display {
   display: block;
+}
+
+nav:after {
+  content: "";
+  clear: both;
+  display: block;
+}
+
+nav a {
+  display: block;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+nav ul ul {
+  background-color: #fff;
+  display: none;
+  position: absolute;
+  min-width: 100%;
+}
+
+nav > ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+nav > ul > li {
+  position: relative;
+  margin: 1px;
+  -webkit-box-flex: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+}
+
+nav ul ul li + li {
+  border-top: 1px solid white;
+}
+
+nav ul li a {
+  background-color: silver;
+  padding: 10px 20px;
+  color: grey;
+  text-align: center;
+}
+
+nav > ul > li > a {
+  background-color: #3f464c;
+  color: white;
+}
+
+nav ul ul a {
+  background-color: #fefefe;
+  color: white;
+}
+
+.fleche {
+  display: inline-block;
+  width: 0;
+  height: 0;
+  margin-left: 4px;
+  vertical-align: middle;
+  border-top: 6px solid;
+  border-right: 6px solid transparent;
+  border-left: 6px solid transparent;
+}
+
+.titre {
+  font-family: 'Righteous', cursive;
+}
+
+.sous-titre {
+  font-family: 'Righteous', cursive;
+}
+
+span {
+  color: white;
 }
 /*# sourceMappingURL=style.css.map */

@@ -27,6 +27,10 @@
             padding: 1rem 6rem;
         }
 
+        i {
+            margin-right: 1em;
+        }
+
         .popup-cookie__par {
             padding: 5rem;
             display: flex;
@@ -35,10 +39,11 @@
 
         p {
             margin: 1rem 0;
+            text-decoration: none;
         }
 
         a {
-            text-decoration: underline;
+            text-decoration: none;
         }
 
         h4 {
