@@ -1,123 +1,155 @@
-div.sous-cat {
-  border-left: 3px solid #fe423f;
-}
-
+@import url("https://fonts.googleapis.com/css2?family=Baloo+Tamma+2:wght@400;600&display=swap");
 * {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-}
-
-ul {
-  list-style-type: none;
   margin: 0;
   padding: 0;
 }
 
-/* custom menu */
-nav:after {
-  content: "";
-  clear: both;
-  display: block;
-}
-
-nav a {
-  display: block;
-  text-decoration: none;
-  white-space: nowrap;
-}
-
-nav ul ul {
-  background-color: #fff;
-  display: none;
-  position: absolute;
-  min-width: 100%;
-}
-
-nav > ul {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-nav > ul > li {
-  position: relative;
-  margin: 1px;
-  -webkit-box-flex: 1;
-      -ms-flex-positive: 1;
-          flex-grow: 1;
-}
-
-nav ul ul li + li {
-  border-top: 1px solid white;
-}
-
-nav ul li a {
-  background-color: silver;
-  padding: 10px 20px;
-  color: grey;
-  text-align: center;
-}
-
-nav > ul > li > a {
-  background-color: #3f464c;
-  color: white;
-}
-
-nav ul ul a {
-  background-color: #ff6101;
-  color: white;
-}
-
-.fleche {
-  display: inline-block;
-  width: 0;
-  height: 0;
-  margin-left: 4px;
-  vertical-align: middle;
-  border-top: 6px solid;
-  border-right: 6px solid transparent;
-  border-left: 6px solid transparent;
-}
-
-.titre {
-  font-family: 'Righteous', cursive;
-}
-
-.sous-titre {
-  font-family: 'Righteous', cursive;
-}
-
-span {
-  color: white;
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
 }
 
 body {
-  font-family: 'Righteous', cursive;
+  font-size: 1.6rem;
+  font-family: "Baloo Tamma 2", sans-serif;
+  background: #232323;
+  color: #eee;
 }
-/*placement image fait a partir du js*/
-section {
-  display:flex;
-  width: 100%;
-  overflow-x: auto;
+
+ul {
+  list-style: none;
 }
-section img {
-  width: 17em;
-  transition: 250ms all;
+
+a {
+  text-decoration: none;
 }
-img:hover {
-  margin:0 2em;
-  transform: scale(1.1);
+
+.container {
+  max-width: 110rem;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.social-icons {
+  position: fixed;
+  z-index: 1000;
+  top: 15vh;
+}
+
+.social-icons .social {
   cursor: pointer;
+  width: 12rem;
+  position: absolute;
+  left: -10rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  gap: 2rem;
+  color: #fff;
+  padding: 1rem 2rem;
+  border-top-right-radius: 5rem;
+  border-bottom-right-radius: 5rem;
+  -webkit-transition: all .3s ease;
+  transition: all .3s ease;
 }
-#movies-searchable {
-  margin-top: 1em;
+
+.social-icons .social i {
+  font-size: 2.5rem;
 }
-.content {
-  border:0.1em solid black;
-  height: 20em;
-  display: none;
+
+.social-icons .social:hover {
+  left: 0;
 }
-.content-display{
-  display: block;
+
+.social-icons .twitter {
+  background: #209AE9;
+}
+
+.social-icons .facebook {
+  background: #405E92;
+  top: 5rem;
+}
+
+.social-icons .instagram {
+  background: #DE4277;
+  top: 10rem;
+}
+
+.social-icons .google {
+  background: #ce1818;
+  top: 15rem;
+}
+
+#popupCookie {
+  background: rgba(0, 0, 0, 0.7);
+  position: fixed;
+  z-index: 1000000;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  /* display: none; */
+}
+
+#popupCookie .popup-cookie {
+  background: #fff;
+  color: #232323;
+  width: 100%;
+}
+
+@media (min-width: 768px) {
+  #popupCookie .popup-cookie {
+    width: 40%;
+  }
+}
+
+#popupCookie .popup-cookie h2 {
+  background: #ce1818;
+  color: #eee;
+  padding: 1rem 6rem;
+}
+
+#popupCookie .popup-cookie .popup-cookie__par {
+  padding: 5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+#popupCookie .popup-cookie p {
+  margin: 1rem 0;
+}
+
+#popupCookie .popup-cookie a {
+  text-decoration: underline;
+}
+
+#popupCookie .popup-cookie h4 {
+  text-align: right;
+  background: #ce1818;
+  display: inline-block;
+  margin-left: auto;
+  color: #eee;
+  padding: 1rem 2rem;
+  cursor: pointer;
 }
 /*# sourceMappingURL=style.css.map */

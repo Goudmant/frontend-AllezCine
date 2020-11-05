@@ -1,82 +1,9 @@
-
-//test
-div.sous-cat {
-    border-left: 3px solid #fe423f;
-}
-////////////////// jumbotron deroule 
-*{
-    box-sizing: border-box;
-  }
-  ul{
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-  }
-  /* custom menu */
-  nav:after{
-    content: "";
-    clear: both;
-    display: block;
-  }
-  nav a{
-    display: block;
-    text-decoration: none;
-    white-space: nowrap;
-  }
-  nav ul ul{
-    background-color: #fff;
-    display: none;
-    position: absolute;
-    min-width: 100%;
-  }
-  nav>ul{
-    display: flex;
-  }
-  nav>ul>li{
-    position: relative;
-    margin: 1px;
-    flex-grow: 1;
-  }
-  nav ul ul li+li{
-    border-top: 1px solid white;
-  }
-  nav ul li a{
-    background-color: silver;
-    padding: 10px 20px;
-    color: grey;
-    text-align: center;
-  }
-  nav>ul>li>a{
-    background-color: rgb(63,70,76);
-    color: white;
-  } 
-  nav ul ul a{
-    background-color:  rgb(282,97,1);
-    color: white;
-  }
-  .fleche {
-    display: inline-block;
-    width: 0;
-    height: 0;
-    margin-left: 4px;
-    vertical-align: middle;
-    border-top: 6px solid;
-    border-right: 6px solid transparent;
-    border-left: 6px solid transparent;
-  }
-/////////////////////////deroule fin ////////////
-
-///////////////////////// jumbotron ////////////////
-
-.titre {
-  font-family: 'Righteous', cursive;
-}
-.sous-titre {
-  font-family: 'Righteous', cursive;
-}
-span {
-  color: white;
-}
-body {
-  font-family: 'Righteous', cursive;
-}
+//Merge scss//
+@import 'reset';
+@import 'social';
+@import 'cookies';
+//@import 'nav';
+//@import 'hero';
+//@import 'featured';
+//@import 'modal-movie';
+//@import 'genre';
