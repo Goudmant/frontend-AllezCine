@@ -86,7 +86,7 @@ document.onclick = function(event) {
   const path =`/movie/${movieId}/videos`;
   const url = generateUrl(path);
   //fetch movie videos
-    fetch()
+    fetch(url)
       .then((res) => res.json())
       .then((data) => { 
         // TODO
