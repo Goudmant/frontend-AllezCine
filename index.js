@@ -1,6 +1,6 @@
 //ma api kley a étée utilisée dans  navigateur a la suite de:
 // https://api.themoviedb.org/3/movie/76341?api_key=
-const API_KEY = 'a5e9ce910863d3be9153c337678e8460';
+// 'a5e9ce910863d3be9153c337678e8460';
 // jeton v4 auth 
 //eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJhNWU5Y2U5MTA4NjNkM2JlOTE1M2MzMzc2NzhlODQ2MCIsInN1YiI6IjVmYTE1ZDg1MGMxMjU1MDAzNzI3N2MxMyIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.wh2Xh_ffGQ2GWqZ9-W3DHMva1VEAkXSFP9UwXXPGNoo
 
@@ -8,29 +8,13 @@ const API_KEY = 'a5e9ce910863d3be9153c337678e8460';
   //--header 'Authorization: Bearer <<access_token>>' \
   //--header 'Content-Type: application/json;charset=utf-8'
 
-const endpoint='https://api.themoviedb.org/3/search/movie?api_key=a5e9ce910863d3be9153c337678e8460&query=furious&page=2'
-
-//select element DOM
-const inputElement = document.querySelector('#inputValue');
-const button = document.querySelector('#search')
-button.onclick = function(event){
-  event.preventDefault();
-  const value = inputElement.value;
-  console.log('value:' ,value)
-} 
-//ma api kley a étée utilisée dans  navigateur a la suite de:
-// https://api.themoviedb.org/3/movie/76341?api_key=
-//;
-// jeton v4 auth 
-//eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJhNWU5Y2U5MTA4NjNkM2JlOTE1M2MzMzc2NzhlODQ2MCIsInN1YiI6IjVmYTE1ZDg1MGMxMjU1MDAzNzI3N2MxMyIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.wh2Xh_ffGQ2GWqZ9-W3DHMva1VEAkXSFP9UwXXPGNoo
-
 const API_KEY = 'a5e9ce910863d3be9153c337678e8460';
 const url ='https://api.themoviedb.org/3/search/movie/?api_key=a5e9ce910863d3be9153c337678e8460'
 
+//select element DOM
 const inputElement = document.querySelector('#inputValue');
 const button = document.querySelector('#search');
 const moviesSearchable =document.querySelector('#movies-searchable');
-
 
 function movieSection(movies){
 	return movies.map((movie) => {
@@ -40,27 +24,6 @@ function movieSection(movies){
 	})
 }
 
-//esseye de recreer sa 
-/*<div id="movies-searchable">
-            <div class="movie">
-                <section class="section">
-                    <img
-                    src=""
-                    alt=""
-                    data-movie-id=""
-                    />
-                    <img
-                    src=""
-                    alt=""
-                    data-movie-id=""
-                    />
-                </section>
-                <div class="content">
-                    <p id="content-close">xx</p>
-                </div>
-            </div>
-		</div>    */ 
-		
 function createMovieContainer(movies){
 	const movieElement =document.createElement('div');//ligne 74
 	movieElement.setAttribute('class', 'movie');//ligne 74
@@ -97,6 +60,9 @@ button.onclick = function(event){
       });
   console.log('value:' ,value);
 }
+
+
+
 /////////////////// menu déroule /////////////////
 (function() {
   var tabMenu = document.querySelectorAll('.deroule');
