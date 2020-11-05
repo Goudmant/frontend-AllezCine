@@ -12,8 +12,6 @@ html {
 body {
   font-size: 1.6rem;
   font-family: "Baloo Tamma 2", sans-serif;
-  background: #232323;
-  color: #eee;
 }
 
 ul {
@@ -82,7 +80,7 @@ a {
 }
 
 .social-icons .google {
-  background: #ce1818;
+  background: #fe423f;
   top: 15rem;
 }
 
@@ -119,8 +117,8 @@ a {
 }
 
 #popupCookie .popup-cookie h2 {
-  background: #ce1818;
-  color: #eee;
+  background: #fe423f;
+  color: #fefefe;
   padding: 1rem 6rem;
 }
 
@@ -145,11 +143,88 @@ a {
 
 #popupCookie .popup-cookie h4 {
   text-align: right;
-  background: #ce1818;
+  background: #fe423f;
   display: inline-block;
   margin-left: auto;
-  color: #eee;
+  color: #fefefe;
   padding: 1rem 2rem;
   cursor: pointer;
+}
+
+nav:after {
+  content: "";
+  clear: both;
+  display: block;
+}
+
+nav a {
+  display: block;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+nav ul ul {
+  background-color: #fff;
+  display: none;
+  position: absolute;
+  min-width: 100%;
+}
+
+nav > ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+nav > ul > li {
+  position: relative;
+  margin: 1px;
+  -webkit-box-flex: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+}
+
+nav ul ul li + li {
+  border-top: 1px solid white;
+}
+
+nav ul li a {
+  background-color: silver;
+  padding: 10px 20px;
+  color: grey;
+  text-align: center;
+}
+
+nav > ul > li > a {
+  background-color: #3f464c;
+  color: white;
+}
+
+nav ul ul a {
+  background-color: #ff6101;
+  color: white;
+}
+
+.fleche {
+  display: inline-block;
+  width: 0;
+  height: 0;
+  margin-left: 4px;
+  vertical-align: middle;
+  border-top: 6px solid;
+  border-right: 6px solid transparent;
+  border-left: 6px solid transparent;
+}
+
+.titre {
+  font-family: 'Righteous', cursive;
+}
+
+.sous-titre {
+  font-family: 'Righteous', cursive;
+}
+
+span {
+  color: white;
 }
 /*# sourceMappingURL=style.css.map */
