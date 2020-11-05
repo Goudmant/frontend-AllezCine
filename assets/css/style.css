@@ -151,31 +151,16 @@ a {
   cursor: pointer;
 }
 
-nav:after {
-  content: "";
-  clear: both;
-  display: block;
-}
-
-nav a {
-  display: block;
-  text-decoration: none;
-  white-space: nowrap;
-}
-
-nav ul ul {
-  background-color: #fff;
-  display: none;
-  position: absolute;
-  min-width: 100%;
-}
-
-nav > ul {
+/*placement image fait a partir du js*/
+section {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  width: 100%;
+  overflow-x: auto;
 }
 
+<<<<<<< HEAD
 nav > ul > li {
   position: relative;
   margin: 1px;
@@ -203,28 +188,32 @@ nav > ul > li > a {
 nav ul ul a {
   background-color: #fefefe;
   color: white;
+=======
+section img {
+  width: 17em;
+  -webkit-transition: 250ms all;
+  transition: 250ms all;
+>>>>>>> 73acaf81e2e3a7e8a9cb433d073f4500cfd0dc04
 }
 
-.fleche {
-  display: inline-block;
-  width: 0;
-  height: 0;
-  margin-left: 4px;
-  vertical-align: middle;
-  border-top: 6px solid;
-  border-right: 6px solid transparent;
-  border-left: 6px solid transparent;
+img:hover {
+  margin: 0 2em;
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+  cursor: pointer;
 }
 
-.titre {
-  font-family: 'Righteous', cursive;
+#movies-searchable {
+  margin-top: 1em;
 }
 
-.sous-titre {
-  font-family: 'Righteous', cursive;
+.content {
+  border: 0.1em solid black;
+  height: 20em;
+  display: none;
 }
 
-span {
-  color: white;
+.content-display {
+  display: block;
 }
 /*# sourceMappingURL=style.css.map */
