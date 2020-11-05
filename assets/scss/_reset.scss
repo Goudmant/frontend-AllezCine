@@ -2,9 +2,9 @@
 
 $main-font: 'Baloo Tamma 2',
 sans-serif;
-$primary: rgb(206, 24, 24);
+$primary:#fe423f;
 $black: #232323;
-$white: #eee;
+$white:#fefefe;
 
 * {
     margin: 0;
@@ -20,8 +20,7 @@ html {
 body {
     font-size: 1.6rem;
     font-family: $main-font;
-    background: $black;
-    color: $white;
+    
 }
 
 ul {

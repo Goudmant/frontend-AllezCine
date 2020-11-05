@@ -12,8 +12,6 @@ html {
 body {
   font-size: 1.6rem;
   font-family: "Baloo Tamma 2", sans-serif;
-  background: #232323;
-  color: #eee;
 }
 
 ul {
@@ -82,7 +80,7 @@ a {
 }
 
 .social-icons .google {
-  background: #ce1818;
+  background: #fe423f;
   top: 15rem;
 }
 
@@ -119,8 +117,8 @@ a {
 }
 
 #popupCookie .popup-cookie h2 {
-  background: #ce1818;
-  color: #eee;
+  background: #fe423f;
+  color: #fefefe;
   padding: 1rem 6rem;
 }
 
@@ -145,10 +143,10 @@ a {
 
 #popupCookie .popup-cookie h4 {
   text-align: right;
-  background: #ce1818;
+  background: #fe423f;
   display: inline-block;
   margin-left: auto;
-  color: #eee;
+  color: #fefefe;
   padding: 1rem 2rem;
   cursor: pointer;
 }
