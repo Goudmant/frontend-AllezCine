@@ -160,40 +160,10 @@ section {
   overflow-x: auto;
 }
 
-<<<<<<< HEAD
-nav > ul > li {
-  position: relative;
-  margin: 1px;
-  -webkit-box-flex: 1;
-  -ms-flex-positive: 1;
-  flex-grow: 1;
-}
-
-nav ul ul li + li {
-  border-top: 1px solid white;
-}
-
-nav ul li a {
-  background-color: silver;
-  padding: 10px 20px;
-  color: grey;
-  text-align: center;
-}
-
-nav > ul > li > a {
-  background-color: #3f464c;
-  color: white;
-}
-
-nav ul ul a {
-  background-color: #fefefe;
-  color: white;
-=======
 section img {
   width: 17em;
   -webkit-transition: 250ms all;
   transition: 250ms all;
->>>>>>> 73acaf81e2e3a7e8a9cb433d073f4500cfd0dc04
 }
 
 img:hover {
