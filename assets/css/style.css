@@ -94,4 +94,30 @@ span {
 body {
   font-family: 'Righteous', cursive;
 }
+/*placement image fait a partir du js*/
+section {
+  display:flex;
+  width: 100%;
+  overflow-x: auto;
+}
+section img {
+  width: 17em;
+  transition: 250ms all;
+}
+img:hover {
+  margin:0 2em;
+  transform: scale(1.1);
+  cursor: pointer;
+}
+#movies-searchable {
+  margin-top: 1em;
+}
+.content {
+  border:0.1em solid black;
+  height: 20em;
+  display: none;
+}
+.content-display{
+  display: block;
+}
 /*# sourceMappingURL=style.css.map */

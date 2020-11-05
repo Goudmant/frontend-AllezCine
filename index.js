@@ -9,6 +9,8 @@
   //--header 'Content-Type: application/json;charset=utf-8'
 
 const API_KEY = 'a5e9ce910863d3be9153c337678e8460';
+const IMAGE_URL ='https://image.tmdb.org/t/p/w500'
+
 const url ='https://api.themoviedb.org/3/search/movie/?api_key=a5e9ce910863d3be9153c337678e8460'
 
 //select element DOM
@@ -16,11 +18,15 @@ const inputElement = document.querySelector('#inputValue');
 const button = document.querySelector('#search');
 const moviesSearchable =document.querySelector('#movies-searchable');
 
+
 function movieSection(movies){
 	return movies.map((movie) => {
-		return `
-				<img src=${movie.poster_path} data-movie-id=${movie.id}/>
-			`;
+    if (movie.poster_path){
+        return `<img 
+          src=${IMAGE_URL + movie.poster_path}
+          data-movie-id=${movie.id}
+      />`;
+      }
 	})
 }
 
@@ -28,17 +34,21 @@ function createMovieContainer(movies){
 	const movieElement =document.createElement('div');//ligne 74
 	movieElement.setAttribute('class', 'movie');//ligne 74
 	//ligne 76
-	const movieTemplate =`
-	<section class="section">
-		${movieSection(movies)}  
-	</section>
-	<div class="content">
+	const movieTemplate =`<section class="section">${movieSection(movies)}</section>
+	<div class="content" >
 		<p id="content-close">xx</p>
 	</div>
 	`;
-
-	movieElement.innerHTML = movieTemplate;
+  movieElement.innerHTML = movieTemplate;
 	return movieElement;
+}
+function renderSearchMovies(data){
+  //data.result []
+  moviesSearchable.innerHTML = '';
+  const movies = data.results;
+  const movieBlock = createMovieContainer(movies);
+  moviesSearchable.appendChild(movieBlock) 
+      console.log('data : ',data);
 }
 //commence ici
 button.onclick = function(event){
@@ -46,25 +56,40 @@ button.onclick = function(event){
   	const value = inputElement.value;
    	const newUrl = url + '&query=' + value; 
 
-  fetch(newUrl)
+    fetch(newUrl)
       .then((res)=> res.json())
-      .then((data) => {
-		  //data-result
-		  const movies = data.results;
-		  const moveBlock = createMovieContainer(movie);
-		  moviesSearchable.
-          console.log('data : ',data);
-      })
-      .catch(() => {
-        console.log('erro:', error);
+      .then(renderSearchMovies)       
+      .catch((error) => {
+        console.log('error:', error);
       });
+      inputElement.value='';
   console.log('value:' ,value);
+}
+document.onclick = function(event) {
+  const target = event.target;
+  if (target.tagName.toLowerCase() === 'img'){
+  console.log('hellooo');
+  }
 }
 
 
 
+// Activate Carousel
+$("#myCarousel").carousel();
+
+// Enable Carousel Indicators
+$(".item").click(function(){
+  $("#myCarousel").carousel(1);
+});
+
+// Enable Carousel Controls
+$(".left").click(function(){
+  $("#myCarousel").carousel("prev");
+});
+
+
 /////////////////// menu déroule /////////////////
-(function() {
+/*(function() {
   var tabMenu = document.querySelectorAll('.deroule');
   var tabD = document.querySelectorAll('ul ul');
   function deroule(e){
@@ -94,5 +119,5 @@ button.onclick = function(event){
   window.addEventListener("scroll",function(){
     tabMenu.forEach(ferme);
   });
-})(); 
+})(); */
 ////////////menu deroule fin /////////////// 
