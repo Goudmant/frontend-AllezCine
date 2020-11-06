@@ -200,6 +200,10 @@ img:hover {
   display: block;
 }
 
+body {
+  font-family: 'Righteous', cursive;
+}
+
 nav:after {
   content: "";
   clear: both;
