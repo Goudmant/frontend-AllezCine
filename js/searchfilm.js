@@ -1,13 +1,8 @@
 //ma api kley a étée utilisée dans  navigateur a la suite de:
 // https://api.themoviedb.org/3/movie/76341?api_key=
 // 'a5e9ce910863d3be9153c337678e8460';
-// jeton v4 auth 
-//eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJhNWU5Y2U5MTA4NjNkM2JlOTE1M2MzMzc2NzhlODQ2MCIsInN1YiI6IjVmYTE1ZDg1MGMxMjU1MDAzNzI3N2MxMyIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.wh2Xh_ffGQ2GWqZ9-W3DHMva1VEAkXSFP9UwXXPGNoo
 
-  //--url 'https://api.themoviedb.org/3/movie/76341' \
-  //--header 'Authorization: Bearer <<access_token>>' \
-  //--header 'Content-Type: application/json;charset=utf-8'
-
+ 
 const API_KEY = 'a5e9ce910863d3be9153c337678e8460';
 const IMAGE_URL ='https://image.tmdb.org/t/p/w500'
 
@@ -71,6 +66,14 @@ button.onclick = function(event){
   console.log('value:' ,value);
 }
 
+function createIframe(video){
+  const iframe =document.createElement('iframe');
+  iframe.src =`https://www.youtube.com/embed/${video.key}`;
+  iframe.width=300;
+  iframe.height=250;
+  iframe.allowFullscreen=true;
+  return iframe;
+}
 // event delegation
 document.onclick = function(event) {
  
@@ -91,7 +94,17 @@ document.onclick = function(event) {
       .then((data) => { 
         // TODO
         //display movie videos
-        console.log('videos:', data)
+        console.log('videos:', data);
+        const videos =data.results; 
+        const length =videos.length > 2 ? 2 : videos.length;
+        const iframeContainer = document.createElement('div');
+        
+        for (let  i = 0; i< length; i++ ){ 
+          const video = videos[i];
+          const iframe = createIframe(video);
+          iframeContainer.appendChild(iframe);
+          content.appendChild(iframeContainer)
+        }
       })
       .catch((error)=> {
         console.log('Error:',error);
