@@ -31,7 +31,6 @@ Temps accorder : 3 jours. (temps accordé rallongé )
 
 
 Distribution des taches : 
-***
 <hr>
 
 <ul>
@@ -49,8 +48,11 @@ Distribution des taches :
   <li></li>
 </ul>
 
-Réalisations : Yvan
-***
+<hr>
+
+
+
+#Réalisations : Yvan
 <hr>
 
 One-Page, Jumbotron, Main , footer , Link, Fenetre Pop-pup, Slider réseaux sociaux... 
@@ -68,9 +70,10 @@ One-Page, Jumbotron, Main , footer , Link, Fenetre Pop-pup, Slider réseaux soci
   <li>README</li>
 </ul>
 
-Réalisations : Dorian
 ***
+#Réalisations : Dorian
 <hr>
+
 <ul>
   <li>(Projects github-Calendrier kandan)</li>
   <li></li>
@@ -81,6 +84,9 @@ Réalisations : Dorian
   <li></li>
   <li></li>
 </ul>
+
+<hr> THE END <hr>
+
 
 
 
