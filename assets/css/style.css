@@ -279,4 +279,12 @@ div.col-10.justify-content-left.btn1 {
   margin-bottom: 2%;
   font-weight: bold;
 }
+
+div.row.justify-content-center.align-items-center {
+  margin-top: 2%;
+}
+
+.container1 {
+  margin-top: 5%;
+}
 /*# sourceMappingURL=style.css.map */
