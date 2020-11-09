@@ -1,7 +1,7 @@
 # Création d'un One-page: AllezCiné .
 
 Projet de groupe (  Dorian storella & Yvan Goudmant ) 
-Temps accorder : 3 jours.
+Temps accorder : 3 jours. (temps accordé rallongé ) 
 
 <strong>But du projet:</strong>
 
@@ -28,6 +28,64 @@ Temps accorder : 3 jours.
   <li>Une Api</li>
   <li>Font Awesome Icons</li>
 </ul>
+
+
+Distribution des taches : 
+***
+<hr>
+
+<ul>
+  <li>Yvan</li>
+  <li>HTML</li>
+  <li>Bootsraap</li>
+  <li>CSS</li>
+  <li></li>
+</ul>
+
+<ul>
+  <li>Dorian</li>
+  <li>JS</li>
+  <li>API</li>
+  <li></li>
+</ul>
+
+Réalisations : Yvan
+***
+<hr>
+
+One-Page, Jumbotron, Main , footer , Link, Fenetre Pop-pup, Slider réseaux sociaux... 
+***
+<hr>
+
+<ul>
+  <li>One-Page</li>
+  <li>Jumbotron (HTML, Bootstraap )</li>
+  <li>Main (HTML, Bootstraap )</li>
+  <li>Footer (HTML, Bootstraap )</li>
+  <li>Link (Script, Font Awesome, Google Font )</li>
+  <li>Fenetre Pop-pup (HTML, Bootstraap, JS , CSS/SASS )</li>
+  <li>Slider réseaux sociaux (HTML, Bootstraap, JS , CSS/SASS )</li>
+  <li>README</li>
+</ul>
+
+Réalisations : Dorian
+***
+<hr>
+<ul>
+  <li>(Projects github-Calendrier kandan)</li>
+  <li></li>
+  <li></li>
+  <li></li>
+  <li></li>
+  <li></li>
+  <li></li>
+  <li></li>
+</ul>
+
+
+
+
+ 
 
 
   
