@@ -1,5 +1,7 @@
 # Création d'un One-page: AllezCiné .
 
+Le resultat https://goudmant.github.io/frontend-AllezCine/
+
 Projet de groupe (  Dorian storella & Yvan Goudmant ) 
 Temps accorder : 3 jours. (temps accordé rallongé ) 
 
